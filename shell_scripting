@@ -11,5 +11,4 @@ rm -rf /usr/local/bin/terraform
 chmod 700 terraform
 echo "Moving Terraform File to /usr/local/bin/.."
 mv terraform /usr/local/bin/
-echo "Checking Terraform Version.."
 terraform --version
