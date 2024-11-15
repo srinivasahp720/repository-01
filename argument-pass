@@ -1,29 +1,15 @@
 #!/bin/bash
-
 #Add debug mode
-
 set +x
-
 #Declare Terraform Version To Download
-
 T_VERSION=$1
-
 #Download Terraform Latest Zip File
-
-echo "We are Downloading Terraform Version: ${T_VERSION}.."
-
+echo 'We are Downloading Terraform Version: ${T_VERSION}'
 wget https://releases.hashicorp.com/terraform/1.9.8/terraform_1.9.8_windows_amd64.zip -O terraform.zip
-
-echo "Unzipping Terraform File and Removing Zip File.."
-
+echo 'Unzipping Terraform File and Removing Zip File'
 unzip terraform.zip && rm -rf terraform.zip LICENSE.txt
-
-echo "Removing Existing Terraform File if exists.."
-
+echo 'Removing Existing Terraform File if exists'
 rm -rf /usr/local/bin/terraform
-
 chmod 700 terraform
-
 echo "Moving Terraform File to /usr/local/bin/.."
-
 mv terraform /usr/local/bin/
