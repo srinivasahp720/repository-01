@@ -2,9 +2,7 @@
 #Declare Version
 T_VERSION='1.8.5'
 #Download Terraform Latest Zip File
-echo "We are Downloading Terraform Version: ${T_VERSION)"
 wget https://releases.hashicorp.com/terraform/${T_VERSION}/terraform S
-echo "Unzipping Terraform File and Removing Zip File"
 unzip terraform.zip && rm -rf terraform.zip
 rm -rf /usr/local/bin/terraform
 chmod 700 terraform
