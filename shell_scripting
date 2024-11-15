@@ -2,9 +2,7 @@
 #Declare Version
 T_VERSION='1.8.5'
 #Download Terraform Latest Zip File
-wget https://releases.hashicorp.com/terraform/${T_VERSION}/terraform S
-unzip terraform.zip && rm -rf terraform.zip
-rm -rf /usr/local/bin/terraform
+wget https://releases.hashicorp.com/terraform/1.9.8/terraform_1.9.8_windows_amd64.zip
 chmod 700 terraform
 mv terraform /usr/local/bin/
 terraform --version
